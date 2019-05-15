@@ -16,7 +16,7 @@ import java.sql.*;
 public class ConnectionManager {
     private Connection con;
     private String driver = "com.mysql.jdbc.Driver";
-    private String url = "jdbc:mysql://localhost:3306/pbd_akhir";
+    private String url = "jdbc:mysql://localhost:3306/tracerstudy";
     private String username = "root";
     private String password = "";
     
