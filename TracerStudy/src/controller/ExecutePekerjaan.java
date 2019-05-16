@@ -48,7 +48,7 @@ public class ExecutePekerjaan {
     // insert data 
     public int insertPkj(Pekerjaan pkj){
         int hasil = 0;
-        String query = "insert into pekerjaan(id_pekerjaan, id_lulusan, jenis_pekerjaan, alamat_pekerjaaan)"
+        String query = "insert into pekerjaan(id_pekerjaan, id_lulusan, jenis_pekerjaan, alamat_pekerjaan)"
                 + "values('" + pkj.getId_pekerjaan()+ "', '" + pkj.getId_lulusan()
                 +"', '" + pkj.getJenis_pekerjaan()+ "', '" + pkj.getAlamat_pekerjaan()+"')";
         ConnectionManager conMan = new ConnectionManager();

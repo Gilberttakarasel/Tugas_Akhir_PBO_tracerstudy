@@ -48,7 +48,7 @@ public class MenuUtama extends javax.swing.JFrame {
                 jToggleButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 130, -1));
+        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 150, -1));
 
         jToggleButton2.setText("Lihat Data Lulusan");
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -56,7 +56,7 @@ public class MenuUtama extends javax.swing.JFrame {
                 jToggleButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 130, -1));
+        getContentPane().add(jToggleButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 150, -1));
 
         jToggleButton3.setText("Lihat Data Prestasi");
         jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +64,7 @@ public class MenuUtama extends javax.swing.JFrame {
                 jToggleButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 130, -1));
+        getContentPane().add(jToggleButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 150, -1));
 
         jToggleButton4.setText("Lihat Data P2M");
         jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -72,7 +72,7 @@ public class MenuUtama extends javax.swing.JFrame {
                 jToggleButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 130, -1));
+        getContentPane().add(jToggleButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 150, -1));
 
         jToggleButton5.setText("Lihat Data Pekerjaan");
         jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +88,7 @@ public class MenuUtama extends javax.swing.JFrame {
                 jToggleButton6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 130, -1));
+        getContentPane().add(jToggleButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 150, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
