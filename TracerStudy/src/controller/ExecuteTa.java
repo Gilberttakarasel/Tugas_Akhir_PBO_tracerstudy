@@ -5,7 +5,7 @@
  */
 package controller;
 
-import Model.prestasi;
+import Model.ta;
 import db.ConnectionManager;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -20,11 +20,11 @@ import java.util.logging.Logger;
  *
  * @author Lenovo
  */
-public class ExecutePrestasi {
-     // get data
-    public List<prestasi> getAll(){
-        List<prestasi> myPrestasi = new ArrayList();
-        String query = "Select * from prestasi";
+public class ExecuteTa {
+    // get data
+    public List<ta> getAll(){
+        List<ta> myTa = new ArrayList();
+        String query = "Select * from ta";
         ConnectionManager conMan = new ConnectionManager();
         Connection conn = conMan.logOn();
         
@@ -32,33 +32,32 @@ public class ExecutePrestasi {
             Statement stm = conn.createStatement();
             ResultSet rs = stm.executeQuery(query);
             while(rs.next()){
-                prestasi pts = new prestasi ();
-                pts.setId_prestasi(rs.getString("id_prestasi"));
-                pts.setId_lulusan(rs.getString("id_lulusan"));
-                pts.setJenis_prestasi(rs.getString("jenis_prestasi"));
-                pts.setNama_kegiatan(rs.getString("nama_kegiatan"));
-                pts.setPeringkat(rs.getString("peringkat"));
-                myPrestasi.add(pts);
+                ta t = new ta ();
+                t.setId_ta(rs.getString("id_ta"));
+                t.setId_lulusan(rs.getString("id_lulusan"));
+                t.setJudul(rs.getString("judul"));
+                t.setPembimbing(rs.getString("pembimbing"));
+                myTa.add(t);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(ExecutePrestasi.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ExecuteTa.class.getName()).log(Level.SEVERE, null, ex);
         }
         conMan.logOff();
-        return myPrestasi; 
+        return myTa; 
     }
     // insert data 
-    public int insertPts(prestasi pts){
+    public int insertT(ta t){
         int hasil = 0;
-        String query = "insert into prestasi(id_prestasi, id_lulusan, jenis_prestasi, nama_kegiatan, peringkat)"
-                + "values('" + pts.getId_prestasi()+ "', '" + pts.getId_lulusan()
-                +"', '" + pts.getJenis_prestasi()+ "', '" + pts.getNama_kegiatan()+ "', '" + pts.getPeringkat()+"')";
+        String query = "insert into ta(id_ta, id_lulusan, judul, pembimbing)"
+                + "values('" + t.getId_ta()+ "', '" + t.getId_lulusan()
+                +"', '" + t.getJudul()+ "', '" + t.getPembimbing()+"')";
         ConnectionManager conMan = new ConnectionManager();
         Connection conn = conMan.logOn();
         try {
             Statement stm = conn.createStatement();
             hasil = stm.executeUpdate(query);
         } catch (SQLException ex) {
-            Logger.getLogger(ExecutePrestasi.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ExecuteTa.class.getName()).log(Level.SEVERE, null, ex);
         }
         conMan.logOff();
         return hasil;
