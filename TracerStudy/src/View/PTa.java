@@ -170,11 +170,12 @@ public class PTa extends javax.swing.JFrame {
         // TODO add your handling code here:
         new MenuUtama().setVisible(true);
         this.setVisible(false);
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new PLulusan().setVisible(true);
+        new PPrestasi().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
